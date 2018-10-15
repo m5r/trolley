@@ -3,7 +3,7 @@ import './App.css';
 import gonzalez from './gonzalez.png';
 
 function postKilled(amount) {
-	return fetch(`/api/kill/${amount}`, { method: 'POST' });
+	return fetch(`https://analytics.mokhtarmial.com/kill/${amount}`, { method: 'POST' });
 }
 
 class App extends Component {
