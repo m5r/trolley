@@ -3,7 +3,7 @@ import './App.css';
 import gonzalez from './gonzalez.png';
 
 function postKilled(amount) {
-	return fetch(`http://localhost:3029/kill/${amount}`, { method: 'POST' });
+	return fetch(`http://165.227.237.182:3029/kill/${amount}`, { method: 'POST' });
 }
 
 class App extends Component {
