@@ -3,7 +3,7 @@ import './App.css';
 import gonzalez from './gonzalez.png';
 
 function postKilled(amount) {
-	return fetch(`http://165.227.237.182:3029/kill/${amount}`, { method: 'POST' });
+	return fetch(`/api/kill/${amount}`, { method: 'POST' });
 }
 
 class App extends Component {
@@ -26,7 +26,6 @@ class App extends Component {
 			clearInterval(this.state.interval);
 			this.setState({ interval: null, killed: 'five' });
 			postKilled('five');
-			localStorage.setItem('killed', 'five');
 		}
 
 		this.forceUpdate();
@@ -37,7 +36,6 @@ class App extends Component {
 			clearInterval(this.state.interval);
 			this.setState({ interval: null, killed: 'one' });
 			postKilled('one');
-			localStorage.setItem('killed', 'one');
 		}
 	};
 
